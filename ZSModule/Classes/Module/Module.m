@@ -10,4 +10,9 @@
 
 @implementation Module
 
+- (void)testFunc {
+    
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
+
 @end
