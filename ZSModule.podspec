@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZSModule"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "测试demo"
 
 
@@ -79,12 +79,13 @@ Pod::Spec.new do |s|
       modules.public_header_files = 'ZSModule/Classes/Module/*.h'
     end
 
-    source.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ENABLE_SOURCE' }
+    source.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ENABLE_SOURCE=1' }
+    source.user_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ENABLE_SOURCE=1' }
   end
 
   s.subspec 'FrameWork' do |framework|
   	framework.ios.vendored_frameworks = 'ZSModule/Pod/*.framework'
-    framework.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ENABLE_FRAMEWORK' }
+    framework.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ENABLE_FRAMEWORK=1' }
   end
 
   
