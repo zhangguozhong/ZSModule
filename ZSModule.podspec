@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZSModule"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "测试demo"
 
 
@@ -62,20 +62,22 @@ Pod::Spec.new do |s|
 
   s.default_subspec = 'FrameWork'
 
-  s.subspec 'Home' do |home|
-    home.subspec 'Controller' do |controller|
-      controller.source_files = 'ZSModule/Classes/Home/Controller/*.{h,m}'
-      controller.dependency 'ZSModule/Module'
+  s.subspec 'Source' do |source|
+    source.subspec 'Home' do |home|
+      home.subspec 'Controller' do |controller|
+        controller.source_files = 'ZSModule/Classes/Home/Controller/*.{h,m}'
+        controller.dependency 'ZSModule/Source/Module'
+      end
     end
-  end
 
-  s.subspec 'Service' do |service|
-    service.source_files = 'ZSModule/Classes/Service/*.{h,m}'
-  end
+    source.subspec 'Service' do |service|
+      service.source_files = 'ZSModule/Classes/Service/*.{h,m}'
+    end
 
-  s.subspec 'Module' do |modules|
-    modules.source_files = 'ZSModule/Classes/Module/*.{h,m}'
-    modules.public_header_files = 'ZSModule/Classes/Module/*.h'
+    source.subspec 'Module' do |modules|
+      modules.source_files = 'ZSModule/Classes/Module/*.{h,m}'
+      modules.public_header_files = 'ZSModule/Classes/Module/*.h'
+    end
   end
 
   s.subspec 'FrameWork' do |framework|
