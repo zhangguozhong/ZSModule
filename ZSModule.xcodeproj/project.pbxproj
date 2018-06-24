@@ -16,6 +16,7 @@
 		7774B03520DE8E4B004C01F6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774B03420DE8E4B004C01F6 /* HomeViewController.m */; };
 		7774B03820DE8E5E004C01F6 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774B03720DE8E5E004C01F6 /* Service.m */; };
 		7774B03B20DE8E6A004C01F6 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774B03A20DE8E6A004C01F6 /* Module.m */; };
+		77AA36B120DF910E00D31BA2 /* ZSModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AA36B020DF910E00D31BA2 /* ZSModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		7774B03720DE8E5E004C01F6 /* Service.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 		7774B03920DE8E6A004C01F6 /* Module.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		7774B03A20DE8E6A004C01F6 /* Module.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
+		77AA36B020DF910E00D31BA2 /* ZSModule.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZSModule.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77AA36B120DF910E00D31BA2 /* ZSModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +70,7 @@
 		7774B01720DE8CD4004C01F6 /* ZSModule */ = {
 			isa = PBXGroup;
 			children = (
+				77AA36AF20DF90E700D31BA2 /* Pod */,
 				7774B02E20DE8E07004C01F6 /* Classes */,
 				7774B01820DE8CD4004C01F6 /* AppDelegate.h */,
 				7774B01920DE8CD4004C01F6 /* AppDelegate.m */,
@@ -124,6 +128,14 @@
 				7774B03420DE8E4B004C01F6 /* HomeViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		77AA36AF20DF90E700D31BA2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				77AA36B020DF910E00D31BA2 /* ZSModule.framework */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +355,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V3T8NLWMK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZSModule/Pod",
+				);
 				INFOPLIST_FILE = ZSModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +377,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V3T8NLWMK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZSModule/Pod",
+				);
 				INFOPLIST_FILE = ZSModule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
