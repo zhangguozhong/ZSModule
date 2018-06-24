@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZSModule"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "测试demo"
 
 
@@ -82,6 +82,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'FrameWork' do |framework|
   	framework.ios.vendored_frameworks = 'ZSModule/Pod/*.framework'
+    framework.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ENABLE_FRAME=1' }
   end
 
   
